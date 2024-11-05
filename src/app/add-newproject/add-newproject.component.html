@@ -1,0 +1,91 @@
+<div class="container">
+	<div class=" text-center mt-5 ">
+
+		<h1 > Edit Project      </h1>
+			
+		
+	</div>
+
+
+<div class="row ">
+  <div class="col-lg-7 mx-auto">
+	<div class="card mt-2 mx-auto p-4 bg-light">
+		<div class="card-body bg-light">
+   
+		<div class = "container">
+		 <form #newproject="ngForm" (ngSubmit)="UPDateProject()">
+
+			<div *ngIf="project">
+				
+					
+						<div class="input-group mb-3">
+							<input   style="width:260px;" class="form-control" [(ngModel)]="project.name" name="name" />
+							<label  class="input-group-text" >  project name </label>
+
+						</div>
+
+						<div class="input-group mb-3">
+							<input   style="width:260px;" class="form-control" [(ngModel)]="project.description" name="description" />
+							<label  class="input-group-text" > Descreption </label>
+
+						</div>
+
+						<div class="input-group mb-3">
+                            <input   style="width:260px;" class="form-control" [(ngModel)]="project.startDate"  name="startDate" />
+							<label  class="input-group-text" >   StartDate</label>
+
+                        </div>
+						<div class="input-group mb-3">
+                            <input  style="width:260px;" class="form-control" [(ngModel)]="project.endDate" name="endDate" />
+							<label  class="input-group-text" >   endDate</label>
+
+                        </div>
+						
+						<div class="input-group mb-3">
+							<input   style="width:260px;" class="form-control" [(ngModel)]="project.budget" name="budget" />
+							<label  class="input-group-text" > budget </label>
+
+						</div>
+
+						<div class="input-group mb-3">
+							<input   style="width:260px;" class="form-control" [(ngModel)]="project.owner" name="owner" />
+							<label  class="input-group-text" > owner </label>
+
+						</div>
+
+                        <!-- <div class="input-group mb-3">
+							<input   style="width:260px;" class="form-control" [(ngModel)]="project.status" name="status" />
+							<label  class="input-group-text" > Status </label>
+
+						</div>
+						 -->
+			
+				<div class="col-md-12">
+					
+					<input type="submit" class="btn  btn-send 
+						" value="submit "  >
+				
+			</div>
+
+				<h4 class="alert-heading">{{ msg }}</h4>
+                <h4 class="alert-heading">{{ msg2 }}</h4>
+
+            </div>
+
+	 </form>
+	</div>
+		</div>
+
+
+</div>
+	<!-- /.8 -->
+
+</div>
+<!-- /.row-->
+
+</div>
+</div>
+
+
+
+

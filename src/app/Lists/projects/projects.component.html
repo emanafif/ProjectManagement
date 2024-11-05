@@ -1,0 +1,51 @@
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  </head>
+  <div
+  class="container  ">
+      <div class="h2">
+          <h2  > Projects  </h2>       
+      </div>
+      <hr>
+    
+  <table id="Project" dir="ltr" style="margin-top: 50px; margin-bottom: 100px;">
+      <tr>
+          <th scope="col">  Project Name </th>
+          <th scope="col"> Descreption </th>
+          <th scope="col">  startDate </th>
+          <th scope="col">   End Date </th>
+          <th scope="col">  Budget</th>
+          <th scope="col"> Owner   </th>
+          <th scope="col">   status </th>       
+          <th scope="col">  Project Tasks </th>
+          <th scope="col">  Action </th>
+      </tr>
+      <tr *ngFor="let pro of Allprojects">
+          <td >{{pro.name}}</td>
+          <td>{{pro.description}}</td>
+          <td>{{pro.startDate}}</td>
+          <td>{{pro.endDate}}</td>
+          <td>{{pro.budget}}</td>
+          <td>{{pro.owner}}</td>
+          <td  *ngIf="pro.status=='0'" ><button class="btn4" style="   background-color: rgb(215, 112, 44);  font-weight: bolder;">InProgress</button></td>
+          <td *ngIf="pro.status=='1'" ><button class="btn4" style="   background-color: rgb(43, 145, 15);  font-weight: bolder;">Completed</button></td>
+          <td >
+            <a class="underlineHover" routerLink="/TasksComponent">Tasks </a>
+          </td>
+          <td  >
+            <a class="underlineHover" routerLink="/AddnewprojectComponent">Add </a>
+            <button class="btn2 " (click)="deleteData(pro.id)">Delete</button>
+            <a class="underlineHover" routerLink="/AddNewprojectComponent/{{pro.id}}">Edit </a>
+            <button class="btn2 "  (click)="changestatus(pro.id);" *ngIf="pro.status=='0'" style="margin-top: 5px;">Change Status </button>       
+          </td>    
+      </tr>     
+    </table>  
+  </div>
+  
+  
+   
+   
+      

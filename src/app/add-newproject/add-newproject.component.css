@@ -1,0 +1,42 @@
+
+body {
+    font-family: 'Lato', sans-serif;
+    direction: rtl;
+}
+.container{
+    direction: rtl;
+}
+
+h1 {
+    margin-bottom: 40px;
+    color: rgb(12, 95, 168);
+}
+
+label {
+    color: #333;
+}
+
+.btn-send {
+    font-weight: 600;
+    text-transform: uppercase;
+   width: 50%;
+margin-right: 120px;   
+    }
+.help-block.with-errors {
+  
+    margin-top: 5px;
+
+}
+
+.card{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.btn-send{
+    background-color: rgb(5, 88, 140);
+    color: white;
+}
+h4{
+    margin-top: 20px;
+    color: rgb(35, 154, 35);
+}

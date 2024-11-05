@@ -2,7 +2,7 @@
 
 .l-navbar[_ngcontent-ng-c3931691503] {
     
-    width: 10%;
+    width:200px;
     padding: 1rem 1rem 0 0;
    
 }
@@ -15,6 +15,4 @@
 body{
     direction: ltr;
 }
-a{
-   
-}
+
